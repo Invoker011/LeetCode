@@ -15,7 +15,7 @@ class solution{
         int prevValue = 0;
 
         for(int i = s.length() -1;i>=0;i--){
-            int current = s.charAt(i);
+            int current = roman.get(s.charAt(i));
             if(prevValue > current){
                 total -= current;
             }else{
