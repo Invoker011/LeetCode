@@ -22,4 +22,12 @@ public class Solution {
             return newDigits;
         }
     }
+    public static void mains(String[] args){
+        Solution sol = new Solution();
+        int [] dig = {1,3,4,2};
+        int [] result = sol.plusOne(dig);
+        for(int i =0; i<= result.length; i++){
+        System.out.println(result[i]);
+        }
+    }
 }
