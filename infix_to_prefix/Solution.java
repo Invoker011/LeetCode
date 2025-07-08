@@ -38,6 +38,11 @@ public class Solution {
                 if (!fix.isEmpty()) fix.pop();
             }
             else{
+                // if(c =='^'){
+                //     while(!fix.isEmpty() && priority(c) <= priority(c)){
+                //         ans += fix.pop();
+                //     }
+                // }
                 while (!fix.isEmpty() && priority(c) < priority(fix.peek())){
                     ans += fix.peek();
                     fix.pop();
@@ -54,7 +59,7 @@ public class Solution {
     return newRes;
     }
      public static void main(String[] args){
-        String s = "(A+B)*C-D+F";
+        String s = "(A+B)*C-D+F^E";
         Solution sol = new Solution();
         String result = sol.infixToPrefix(s);
         System.out.println(result);
