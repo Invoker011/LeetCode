@@ -25,7 +25,7 @@ public class Solution {
         }
         return maxLen;
     }
-
+    
     public static void main(String [] args){
         Solution sol = new Solution();
         String s = "aaabbccd";
