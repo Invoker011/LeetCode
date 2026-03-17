@@ -1,6 +1,5 @@
 package delete_duplicates_in_LinkedList;
 
-import java.lang.classfile.components.ClassPrinter.ListNode;
 
 /**
  * Definition for singly-linked list.
@@ -21,7 +20,7 @@ public class Solution {
 
         while(currentNode != null && currentNode.next != null){
             if(currentNode.val != currentNode.next.val){
-                currentNode = currentNode.next
+                currentNode = currentNode.next;
             }else{
                 currentNode.next = currentNode.next.next;
             }
