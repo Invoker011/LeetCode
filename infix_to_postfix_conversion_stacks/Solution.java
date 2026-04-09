@@ -1,3 +1,4 @@
+
 import java.util.*;
 public class Solution {
     public int priority( char ch){
