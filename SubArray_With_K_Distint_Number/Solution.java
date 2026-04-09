@@ -34,27 +34,27 @@ public class Solution {
     }
 
     //Approach 2: //using while loop;
-    private int countSubArrays_withloop(int[] num, int i){
-        int l = 0;
-        int r = 0;
-        int arrayCounter = 0;
-        Map<Integer, Integer> mp = new HashMap<>();
-        while(r < num.length && l < num.length){
+    // private int countSubArrays_withloop(int[] num, int i){
+    //     int l = 0;
+    //     int r = 0;
+    //     int arrayCounter = 0;
+    //     Map<Integer, Integer> mp = new HashMap<>();
+    //     while(r < num.length && l < num.length){
 
-            mp.put(num[r], mp.getOrDefault(num[r],0) +1);
+    //         mp.put(num[r], mp.getOrDefault(num[r],0) +1);
 
-            while(mp.size() > i){
-                mp.put(num[l], mp.get(num[l]) - 1);
-                if(mp.get(num[l])==0) mp.remove(num[l]);
-                l++;
-            }
+    //         while(mp.size() > i){
+    //             mp.put(num[l], mp.get(num[l]) - 1);
+    //             if(mp.get(num[l])==0) mp.remove(num[l]);
+    //             l++;
+    //         }
 
-            arrayCounter +=  (r-l+1);
-            r++;
+    //         arrayCounter +=  (r-l+1);
+    //         r++;
 
-        }
-        return arrayCounter;
-    }
+    //     }
+    //     return arrayCounter;
+    // }
 
     
 }
