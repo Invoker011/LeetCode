@@ -68,7 +68,6 @@ public class Solution {
         }
         return total == count ? day : -1;
 
-
     }
     
 }
