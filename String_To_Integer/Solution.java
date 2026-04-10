@@ -14,18 +14,33 @@ public class Solution {
             }
             i++;
         }
-        int result = 0;
-        while(i<n && Character.isDigit(s.charAt(i))){
-            int digit = s.charAt(i) - '0';
 
-            if(result > (Integer.MAX_VALUE - digit)/10){
-                return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
-            }
+        return helper(s,i,0,sign);
+        // int result = 0;
+        // while(i<n && Character.isDigit(s.charAt(i))){
+        //     int digit = s.charAt(i) - '0';
 
-            result = result * 10 + digit;
-            i++;
+        //     if(result > (Integer.MAX_VALUE - digit)/10){
+        //         return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+        //     }
+
+        //     result = result * 10 + digit;
+        //     i++;
+        // }
+        // return result * sign;   
+    }
+
+    private int helper(String s, int i, int result, int sign){
+        if(i >= s.length() && Character.isDigit(s.charAt(i))){
+            return result * sign;
         }
-        return result * sign;   
+        int digit = s.charAt(i) - '0';
+
+        if(result > (Integer.MAX_VALUE - digit)/10){
+            return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+        }
+
+        return helper(s,i+1,result*10+digit,sign);
     }
     
 }
