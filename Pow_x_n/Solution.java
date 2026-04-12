@@ -18,7 +18,6 @@ public class Solution {
         //         nn/=2;
         //     }
         // }
-
         //
         if(n < 0) {
      //       ans = 1.0/ans;
