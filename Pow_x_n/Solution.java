@@ -2,8 +2,6 @@ package Pow_x_n;
 
 public class Solution {
     public double pow(int x, int n){
-
-
         // double ans = 1.0;
         // long nn = n;
 
