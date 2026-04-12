@@ -25,7 +25,6 @@ Explanation: 2-2 = 1/22 = 1/4 = 0.25
 
 Constraints:
 
-
 -100.0 < x < 100.0
 -231 <= n <= 231-1
 n is an integer.
