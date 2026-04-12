@@ -19,7 +19,7 @@ public class Solution {
         //     }
         // }
 
-        
+        //
         if(n < 0) {
      //       ans = 1.0/ans;
             return 1.0/power(x,n);
