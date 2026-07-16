@@ -5,12 +5,17 @@ public class Bubble_Sort {
         int n = nums.length;
 
         for(int i = n - 1; i >=0; i--){
+            boolean swap = false;
             for(int j =0; j <= i-1; j++){
                 if(nums[j] > nums[j+1]){
                     int temp = nums[j+1];
                     nums[j+1] = nums[j];
                     nums[j] = temp;
+                    swap = true;
                 }
+            }
+            if(swap == false){
+                break;
             }
         }
         return nums;
